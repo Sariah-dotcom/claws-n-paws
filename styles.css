@@ -34,6 +34,8 @@ p {
 section {
     padding: 2rem;
     margin-bottom: 5rem;
+    overflow-x: hidden;
+
 }
 
 .cat-doodle {
@@ -41,7 +43,6 @@ section {
 }
 
 body {
-    overflow-x: hidden;
 }
 
 
@@ -63,6 +64,7 @@ body {
 .cat-text {
     display: flex;
     gap: 0.6rem;
+    overflow-x: hidden;
     margin-bottom:8rem;
 }
 
@@ -92,7 +94,7 @@ body {
 
 .hero-img {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     bottom: 0;
 }
 
@@ -128,10 +130,28 @@ body {
 
 /* Swiper Slides */
 .swiper {
-    width: 240px;
+    max-width: 100%;
     height: 320px;
-    margin-top: 11rem;
+    margin-top: 10.3rem;
     position: relative;
+}
+
+@media only screen and (max-width:390px) {
+    .swiper{
+        margin-top: 9.3rem;
+    }
+}
+
+@media only screen and (width:390px) {
+    .swiper{
+        margin-top: 9.9rem;
+    }
+}
+
+@media only screen and (width:375px) {
+    .swiper{
+        margin-top: 9.5rem;
+    }
 }
 
 .swiper-slide {
@@ -154,7 +174,7 @@ body {
     overflow-x: auto;
 
 }
-
+/* Reviews */
 .review-content {
     display: flex;
     flex-direction: column;
