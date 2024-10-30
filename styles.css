@@ -1,8 +1,6 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    /* overflow-x: hidden; */
-
 }
 
 h1, h2, h3 {
@@ -11,7 +9,7 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 p {
@@ -42,22 +40,69 @@ section {
     width: 100%;
 }
 
-body {
+/* Navigation */
+nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /* border-bottom: 2px solid #000; */
+    width: 100%;
+    padding: 1rem;
+    z-index: 10000;
 }
 
+#menu {
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+/* Menu Items Container */
+#menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    opacity: 0; /* Start hidden */
+}
+
+#menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 3rem;
+}
 
 /* Hero */
 #hero {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     overflow-x: hidden;
     padding: 0rem;
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 .hero-text {
     position: relative;
     margin-left: 2rem;
+    margin-top: 6rem;
     z-index: 2;
 }
 
@@ -65,7 +110,7 @@ body {
     display: flex;
     gap: 0.6rem;
     overflow-x: hidden;
-    margin-bottom:8rem;
+    margin-bottom: 8rem;
 }
 
 .cat-text h1{
@@ -193,9 +238,23 @@ body {
 }
 
 .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #000;
     min-height: 40vh;
     color: #fff;
+    padding-top: 5rem;
+}
+
+.footer-content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-logo {
+    height: 5rem;
+    margin-bottom: 2rem;
 }
  
 
