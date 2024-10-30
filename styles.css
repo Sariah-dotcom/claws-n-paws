@@ -3,13 +3,15 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .email {
     font-family: "Anton", sans-serif;
     text-transform: uppercase;
+    font-weight: 400;
+
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 p {
@@ -23,6 +25,8 @@ p {
 .subtitle {
     font-style: italic;
     font-weight: 500;
+    margin-top: -0.5rem;
+    color: #424242;
 }
 
 .section-header {
@@ -39,6 +43,7 @@ section {
 .cat-doodle {
     width: 100%;
 }
+
 
 /* Navigation */
 nav {
@@ -93,54 +98,22 @@ nav {
 /* Hero */
 #hero {
     display: flex;
-    /* align-items: center; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow-x: hidden;
     padding: 0rem;
     min-height: 100vh;
 }
 
-.hero-text {
-    position: relative;
-    margin-left: 2rem;
-    margin-top: 6rem;
-    z-index: 2;
+.hero-caption {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
 }
 
-.cat-text {
-    display: flex;
-    gap: 0.6rem;
-    overflow-x: hidden;
-    margin-bottom: 8rem;
-}
-
-.cat-text h1{
-    position: absolute;
-}
-
-.cat-text h1:nth-child(2) {
-    margin-left: 3rem;
-    margin-top: -1rem;
-}
-
-.cat-text h1:nth-child(3) {
-    margin-left: 5.5rem;
-    margin-top: -1.8rem;
-}
-
-.cat-text h1:nth-child(4) {
-    margin-left: 8rem;
-    margin-top: -2.5rem;
-}
-
-.cat-text h1:nth-child(5) {
-    margin-left: 9.3rem;
-    margin-top: -2.8rem;
-}
-
-.hero-img {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+.hero-caption p {
+    font-weight: 500;
 }
 
 /* Staff */
@@ -157,7 +130,6 @@ nav {
 }
 
 /* Services */
-
 .service-card {
     display: flex;
     flex-direction: column;
@@ -167,9 +139,12 @@ nav {
     gap: 0.8rem;
 }
 
+.service-card svg {
+    margin-bottom: 2rem;
+}
+
 .service-title {
     font-size: 1.5rem;
-    font-weight: 600;
     font-style: italic;
 }
 
@@ -217,8 +192,8 @@ nav {
     background-color: #fff;
     border: 2px solid black;
     overflow-x: auto;
-
 }
+
 /* Reviews */
 .review-content {
     display: flex;
@@ -237,24 +212,47 @@ nav {
     z-index: 2;
 }
 
-.footer-content {
+/* Contact */
+.contact-details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #000;
+    margin-top: 3rem;
+}
+
+.email {
+    text-decoration: none;
+    color: #000;
+    font-size: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
     min-height: 40vh;
-    color: #fff;
     padding-top: 5rem;
 }
 
-.footer-content p {
-    font-size: 1.5rem;
-    font-weight: 600;
+.footer-brand {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 1rem;
+}
+
+.footer-brand h3 {
+    font-size: 2rem;
 }
 
 .footer-logo {
     height: 5rem;
-    margin-bottom: 2rem;
+}
+
+.icons {
+    padding-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
 }
  
 
